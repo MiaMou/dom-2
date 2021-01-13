@@ -33,9 +33,7 @@ window.jQuery = function(selectorOrArray){
         children(){
             const array =[]
             this.each((node)=>{
-                if(array.indexOf(node.parentNode) === -1){
-                    array.push(...node.children)  // ... 就是把children放到一个数组里
-                }            
+                array.push(...node.children)  // ... 就是把children放到一个数组里        
             })
             return jQuery(array)
         },
