@@ -19,8 +19,6 @@ window.$ = window.jQuery = function(selectorOrArrayOrTemplate){
     // api 可以操作 elements
     const api = Object.create(jQuery.prototype)    // 创建一个对象，这个对象的__proto__为jQuery.prototype
     // 相当于 const api = {__proto__: jQuery.prototype}
-    elements = elements
-    oldApi = selectorOrArray.oldApi
     Object.assign(api, {
         elements: elements,
         oldApi: selectorOrArray.oldApi
